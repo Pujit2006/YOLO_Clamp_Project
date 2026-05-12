@@ -1,34 +1,47 @@
-# 🧲 YOLO Clamp Detection System
-> **Vibe:** "The Lazy Legend's Guide to Computer Vision." 
-> Why work hard when you can teach a computer to do the looking for you?
+# ESP32 YOLO Edge AI Detection System
+
+Real-time crack and clamp detection system using ESP32-CAM and YOLOv8.
+
+This project uses an ESP32-CAM module to capture images over WiFi and performs live object detection using a trained YOLOv8 model on a computer.
 
 ---
 
-## 📖 Project Overview
-This project is a beginner-friendly pipeline to train a custom **YOLOv8** model to detect industrial clamps. It covers everything from setting up your environment to running a live webcam feed with your "custom brain."
+## Features
 
-### Features:
-* **One-Click Training:** Simple Python scripts to start the learning process.
-* **Real-Time Detection:** Smooth inference on webcam or video files.
-* **Beginner Friendly:** No PhD in Math required. Just photos and a bit of patience.
+- Real-time image capture using ESP32-CAM
+- YOLOv8 object detection
+- Crack detection
+- Clamp detection
+- OpenCV live visualization
+- WiFi-based communication
+- Lightweight edge AI setup
 
 ---
 
-## 📂 Project Hierarchy
-To keep the AI from getting confused, we use this specific folder structure. **Consistency is key!**
+## Technologies Used
 
-```text
-YOLO_Clamp_Project/
-├── datasets/                 
-│   └── clamp_data/           
-│       ├── train/            # The "Study Material" (80% of data)
-│       │   ├── images/       # Your clamp photos (.jpg, .png)
-│       │   └── labels/       # YOLO format text files (.txt)
-│       ├── val/              # The "Practice Test" (20% of data)
-│       │   ├── images/
-│       │   └── labels/
-│       └── data.yaml         # The "GPS" that tells YOLO where files are
-├── runs/                     # Created automatically (Contains your results)
-├── train.py                  # The script that trains the model
-├── inference.py              # The script that runs the live detection
-└── README.md                 # You are currently reading this!
+- Python
+- YOLOv8
+- OpenCV
+- ESP32-CAM
+- Arduino IDE
+- NumPy
+- Requests
+
+---
+
+## Hardware Required
+
+- ESP32-CAM (AI Thinker)
+- USB to TTL Programmer
+- WiFi Connection
+- Laptop/PC for running YOLO model
+
+---
+
+## Installation
+
+Install required Python libraries:
+
+```bash
+pip install ultralytics opencv-python numpy requests
